@@ -1,0 +1,65 @@
+:root {
+  --bg-light: #f0f0f0;
+  --bg-dark: #1a1a1a;
+  --text-light: #000;
+  --text-dark: #fff;
+  --ball-color: #ff6f61;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.app {
+  text-align: center;
+  padding: 40px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.ball {
+  width: 80px;
+  height: 80px;
+  background-color: var(--ball-color);
+  border-radius: 50%;
+  margin: 40px auto;
+  box-shadow: 0 0 20px rgba(255, 111, 97, 0.6);
+  transition: transform 0.3s ease;
+}
+
+/* Animation class added via JavaScript */
+.bounce {
+  animation: bounce 1s infinite alternate ease-in-out;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-150px); }
+}
